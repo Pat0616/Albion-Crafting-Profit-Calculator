@@ -1,7 +1,7 @@
 import type { CraftInput, CraftCalculation, CraftRound } from './types';
 
 export function calculateCraft(input: CraftInput): CraftCalculation {
-  const id = Date.now().toString();
+  const id = crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const createdAt = Date.now();
 
   let material1 = input.material1OnHand;

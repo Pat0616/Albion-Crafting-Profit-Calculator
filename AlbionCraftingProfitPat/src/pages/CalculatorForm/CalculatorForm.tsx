@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import type { CraftInput, Material, Artifact } from '../lib/types';
+import type { CraftInput, Artifact } from '../lib/types';
 import styles from './CalculatorForm.module.css';
 
 interface CalculatorFormProps {

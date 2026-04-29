@@ -14,7 +14,12 @@ export function getCalculations(): CraftCalculation[] {
   if (typeof window === 'undefined') return [];
 
   const stored = localStorage.getItem(STORAGE_KEY);
-  return stored ? JSON.parse(stored) : [];
+  let calculations = stored ? JSON.parse(stored) : [];
+
+  // Fix any duplicate IDs from before the UUID fix
+  calculations = fixDuplicateIds(calculations);
+
+  return calculations;
 }
 
 export function deleteCalculation(id: string): void {
@@ -28,4 +33,32 @@ export function deleteCalculation(id: string): void {
 export function getCalculationById(id: string): CraftCalculation | null {
   const calculations = getCalculations();
   return calculations.find((calc) => calc.id === id) || null;
+}
+
+function fixDuplicateIds(calculations: CraftCalculation[]): CraftCalculation[] {
+  const seenIds = new Set<string>();
+  const fixedCalculations: CraftCalculation[] = [];
+  let hasDuplicates = false;
+
+  for (const calc of calculations) {
+    if (seenIds.has(calc.id)) {
+      // Found a duplicate ID, generate a new unique ID
+      hasDuplicates = true;
+      const newCalc = {
+        ...calc,
+        id: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      };
+      fixedCalculations.push(newCalc);
+    } else {
+      seenIds.add(calc.id);
+      fixedCalculations.push(calc);
+    }
+  }
+
+  // If we found and fixed duplicates, save the updated calculations
+  if (hasDuplicates) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(fixedCalculations));
+  }
+
+  return fixedCalculations;
 }
