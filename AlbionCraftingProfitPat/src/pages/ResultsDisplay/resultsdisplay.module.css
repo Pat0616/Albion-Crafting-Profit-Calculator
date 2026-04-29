@@ -1,0 +1,346 @@
+.resultsContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.receipt {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  border: 2px solid #e94560;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.receiptTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e94560;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.sessionTitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.itemName {
+  font-size: 1.3rem;
+  color: #d63447;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timestamp {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(233, 69, 96, 0.05);
+  border-left: 4px solid #e94560;
+  border-radius: 4px;
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #d63447;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(233, 69, 96, 0.2);
+}
+
+/* Summary Grid */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(233, 69, 96, 0.08);
+  border-radius: 4px;
+  border-left: 3px solid #e94560;
+}
+
+.summaryItem .label {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.summaryItem .value {
+  color: #d63447;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.value.positive {
+  color: #16a34a;
+}
+
+.value.negative {
+  color: #dc2626;
+}
+
+/* Breakdown Table */
+.breakdownTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: rgba(233, 69, 96, 0.08);
+  border-radius: 4px;
+  align-items: center;
+}
+
+.tableRow.totalRow {
+  background: rgba(233, 69, 96, 0.15);
+  border-top: 2px solid #e94560;
+  border-bottom: 2px solid #e94560;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.tableLabel {
+  color: #333;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tableValue {
+  color: #666;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.tableAmount {
+  text-align: right;
+  color: #d63447;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tableRow.totalRow .tableAmount {
+  color: #16a34a;
+  font-size: 1rem;
+}
+
+/* Rounds Breakdown */
+.roundsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.roundCard {
+  background: rgba(233, 69, 96, 0.08);
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.roundTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e94560;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.roundGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.roundItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: rgba(233, 69, 96, 0.05);
+  border-radius: 3px;
+}
+
+.roundLabel {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.roundValue {
+  font-size: 0.9rem;
+  color: #d63447;
+  font-weight: 600;
+}
+
+/* Final Profit */
+.finalProfit {
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(211, 52, 71, 0.05) 100%);
+  border: 2px solid #e94560;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.profitLabel {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.profitValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.profitValue.negative {
+  color: #dc2626;
+}
+
+/* Action Buttons */
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.saveButton,
+.backButton {
+  padding: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #e94560 0%, #d63447 100%);
+  color: white;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(233, 69, 96, 0.4);
+}
+
+.backButton {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  color: #d63447;
+  border: 2px solid #d63447;
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(233, 69, 96, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .receipt {
+    padding: 1.5rem;
+  }
+
+  .receiptTitle {
+    font-size: 1.2rem;
+  }
+
+  .itemName {
+    font-size: 1.1rem;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tableRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .tableAmount {
+    text-align: left;
+  }
+
+  .roundsContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .finalProfit {
+    padding: 1.5rem;
+  }
+
+  .profitValue {
+    font-size: 2rem;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .receipt {
+    padding: 1rem;
+  }
+
+  .receiptTitle {
+    font-size: 1rem;
+  }
+
+  .itemName {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 0.8rem;
+  }
+
+  .tableLabel {
+    font-size: 0.85rem;
+  }
+
+  .roundGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .profitValue {
+    font-size: 1.5rem;
+  }
+}
