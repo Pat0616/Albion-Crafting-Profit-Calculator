@@ -98,7 +98,7 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
             className={styles.input}
             value={craftingSessionTitle}
             onChange={(e) => setCraftingSessionTitle(e.target.value)}
-            placeholder="e.g., Morning Wood Plank Batch"
+            placeholder="Session 1 Monday Craft- Bearpaws T5.3"
           />
         </div>
         <div className={styles.formGroup}>
@@ -108,7 +108,7 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
             className={styles.input}
             value={itemName}
             onChange={(e) => setItemName(e.target.value)}
-            placeholder="e.g., Wood Planks"
+            placeholder="e.g., Bearpaws T5.3"
           />
         </div>
       </div>
@@ -124,7 +124,7 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
               className={styles.input}
               value={material1Name}
               onChange={(e) => setMaterial1Name(e.target.value)}
-              placeholder="e.g., Wood"
+              placeholder="e.g., Iron Bars"
             />
           </div>
           <div className={styles.formGroup}>
@@ -174,7 +174,7 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
               className={styles.input}
               value={material2Name}
               onChange={(e) => setMaterial2Name(e.target.value)}
-              placeholder="e.g., Water"
+              placeholder="e.g., Wooden Planks"
             />
           </div>
           <div className={styles.formGroup}>
