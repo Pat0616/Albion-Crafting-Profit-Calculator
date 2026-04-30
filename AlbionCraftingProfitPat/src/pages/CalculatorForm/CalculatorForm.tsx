@@ -86,7 +86,6 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <h2 className={styles.title}>Albion Crafting Calculator</h2>
-      <h2 className={styles.title}>by Pat0616</h2>
 
       {/* Item Details */}
       <div className={styles.section}>
