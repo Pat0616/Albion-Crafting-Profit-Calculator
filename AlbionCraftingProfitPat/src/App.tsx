@@ -63,7 +63,9 @@ function App() {
   }
 
   return (
+    <div className={styles.albionbackground}>
     <main className={styles.main}>
+      
       <div className={styles.container}>
         {appState === 'home' && (
           <>
@@ -100,7 +102,9 @@ function App() {
       <footer className={styles.footer}>
         <p>Albion Online Crafting Profit Calculator • Created by Pat0616</p>
       </footer>
+     
     </main>
+     </div>
   )
 }
 
